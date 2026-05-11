@@ -1,4 +1,4 @@
-import discord
+himport discord
 from discord.ext import commands
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
@@ -83,6 +83,7 @@ async def fetch_verse(reference):
 
 
 intents = discord.Intents.default()
+intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 scheduler = AsyncIOScheduler()
 
